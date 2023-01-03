@@ -34,9 +34,10 @@ This application is a mock eBay auctioning application. The way to get started i
  
 ###### List of References
 https://stackoverflow.com/questions/14370183/passing-parameters-to-a-controller-when-loading-an-fxml/14432578#14432578
-https://www.youtube.com/watch?v=ZIzoesrHHQo https://www.youtube.com/watch?v=FeTrcNBVWtg
-https://stackoverflow.com/questions/41424544/how-to-update-value-of-each-row-in-table-view- of-javafx
+https://www.youtube.com/watch?v=ZIzoesrHHQo 
+https://www.youtube.com/watch?v=FeTrcNBVWtg
+https://stackoverflow.com/questions/41424544/how-to-update-value-of-each-row-in-table-view-of-javafx
 https://stackoverflow.com/questions/11065140/javafx-2-1-tableview-refresh-items 
 https://stackoverflow.com/questions/48800076/how-to-refresh-a-particular-row-or-cell-in-tableview 
-https://stackoverflow.com/questions/17402484/populating-tableview-in-javafx-with-tableview-cr eated-in-fxml-file?rq=1 https://stackoverflow.com/questions/26555828/how-to-populate-tableview-dynamically-with-fx ml-and-javafx?rq=1
+https://stackoverflow.com/questions/17402484/populating-tableview-in-javafx-with-tableview-created-in-fxml-file?rq=1 https://stackoverflow.com/questions/26555828/how-to-populate-tableview-dynamically-with-fxml-and-javafx?rq=1
              
