@@ -1,0 +1,21 @@
+FidgetSpinner 1 
+A fidget spinner is a fidgeting toy that spins on a ball bearing
+30 20.00 0000
+RubiksCube 1 
+A rubiks cube is a strategic, fidgeting toy that requires algorithms to solve
+30 15.99 0001
+Basketball 1  
+This basketball is a very high quality Spalding NBA ready ball
+30 49.12 0002
+SwimmingPaddles 1 
+These swimming paddles were created by michael phelps himself, engineered for 15 years at a olympic level
+30 195.84 0003
+MechanicalKeyboard 1 
+This is a mechanical keyboard that comes with pre-lubed brown switches that are tuned to the maximum. 
+30 59.05 0004
+
+The order goes as following:
+
+Name StartingBid LastBidder 
+Description
+Time (seconds) BuyItNowPrice UniqueID

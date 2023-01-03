@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+  <children>
+    <SplitPane dividerPositions="0.25" focusTraversable="true" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+      <items>
+        <AnchorPane>
+          <children>
+                  <SplitPane dividerPositions="0.5018867924528302" orientation="VERTICAL" prefHeight="550.0" prefWidth="240.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="141.0" prefWidth="224.0">
+                           <children>
+                              <VBox layoutX="50.0" layoutY="58.0" prefHeight="272.0" prefWidth="220.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="24.0" prefWidth="267.0" text="History" />
+                                    <HBox prefHeight="29.0" prefWidth="264.0">
+                                       <children>
+                                          <TextField fx:id="historyUNID" alignment="CENTER" prefHeight="27.0" prefWidth="121.0" promptText="Unique ID" />
+                                          <Button fx:id="findHistory" mnemonicParsing="false" onAction="#findHistoryPressed" prefHeight="26.0" prefWidth="108.0" text="Find History" />
+                                       </children>
+                                    </HBox>
+                                    <Pane prefHeight="241.0" prefWidth="219.0">
+                                       <children>
+                                          <Label fx:id="historyLabel" alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="-1.0" layoutY="2.0" prefHeight="240.0" prefWidth="219.0" text="Previous bid amounts:" wrapText="true" />
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="118.0" prefWidth="203.0">
+                           <children>
+                              <ScrollPane hbarPolicy="NEVER" prefHeight="293.0" prefWidth="443.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <content>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="292.0" prefWidth="217.0">
+                                       <children>
+                                          <Label fx:id="consoleText" alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="292.0" prefWidth="204.0" text="Console" textAlignment="CENTER" wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="0.0" />
+                                       </children>
+                                    </AnchorPane>
+                                </content>
+                              </ScrollPane>
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+          </children>
+        </AnchorPane>
+            <AnchorPane prefHeight="571.0" prefWidth="566.0">
+               <children>
+                  <VBox prefHeight="544.5" prefWidth="625.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0">
+                           <children>
+                              <TextField fx:id="narrowSearch" alignment="CENTER" promptText="Enter Keywords" />
+                           </children>
+                        </HBox>
+                        <TableView fx:id="table" editable="true" maxHeight="500.0" minHeight="500.0" prefHeight="500.0" prefWidth="638.0">
+                          <columns>
+                            <TableColumn fx:id="itemName" prefWidth="107.0" text="Item Name" />
+                              <TableColumn fx:id="currentBid" prefWidth="49.0" text="Current Bid" />
+                              <TableColumn fx:id="lastBidder" prefWidth="75.0" text="Last Bidder" />
+                              <TableColumn fx:id="sold" prefWidth="59.0" text="Sold?" />
+                              <TableColumn fx:id="Description" prefWidth="97.0" text="Description" />
+                              <TableColumn fx:id="timeLeft" prefWidth="75.0" text="Time left" />
+                              <TableColumn fx:id="buyItNowPrice" prefWidth="75.0" text="Buy it Now Price" />
+                              <TableColumn fx:id="uniqueId" prefWidth="75.0" text="Unique ID" />
+                          </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                        <AnchorPane prefHeight="32.0" prefWidth="669.0">
+                           <children>
+                              <HBox maxHeight="30.0" minHeight="30.0" prefHeight="30.0" prefWidth="669.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <TextField fx:id="createItemName" prefHeight="27.0" prefWidth="116.0" promptText="Item Name" />
+                                    <TextField fx:id="createItemBid" prefHeight="27.0" prefWidth="116.0" promptText="Starting Bid" />
+                                    <TextField fx:id="createItemDescription" prefHeight="27.0" prefWidth="110.0" promptText="Description" />
+                                    <TextField fx:id="createItemTime" prefHeight="27.0" prefWidth="63.0" promptText="Time" />
+                                    <TextField fx:id="createItemBUY" prefHeight="27.0" prefWidth="115.0" promptText="Buy It Now Price" />
+                                    <TextField fx:id="createItemUNID" prefHeight="27.0" prefWidth="70.0" promptText="Unique ID" />
+                                    <Button fx:id="createItemButton" mnemonicParsing="false" onAction="#createItemButtonPressed" prefHeight="27.0" prefWidth="84.0" text="Create Item" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </AnchorPane>
+                        <HBox alignment="TOP_CENTER" maxHeight="30.0" minHeight="30.0" prefHeight="30.0" prefWidth="669.0">
+                           <children>
+                              <TextField fx:id="bidUNID" prefHeight="26.0" prefWidth="77.0" promptText="Unique ID" />
+                              <TextField fx:id="bidPrice" prefHeight="26.0" prefWidth="83.0" promptText="Price" />
+                              <Button fx:id="bidButton" mnemonicParsing="false" onAction="#bidButtonPress" text="Bid">
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Label fx:id="userName" alignment="BOTTOM_RIGHT" text="Username:">
+                                 <HBox.margin>
+                                    <Insets left="100.0" top="5.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label fx:id="userName" text="enter">
+                                 <HBox.margin>
+                                    <Insets left="5.0" top="5.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Button fx:id="logoutButton" mnemonicParsing="false" onAction="#logoutButtonPressed" prefHeight="27.0" prefWidth="63.0" text="Logout">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button fx:id="quitButton" alignment="CENTER" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#quitButtonPressed" text="Quit" textAlignment="CENTER">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+      </items>
+    </SplitPane>
+  </children>
+</VBox>
